@@ -14,8 +14,13 @@ def make_dictionary(keys_list, values_list):
     >>> make_dictionary(["key"], ["value"])
     {'key': 'value'}
     """
-
-    return #### YOUR CODE HERE
+    stbf_dictionary = {}
+    for i in range(len (keys_list)):
+        key = keys_list[i]
+        value = values_list[i]
+        stbf_dictionary[key] = value
+        
+    return stbf_dictionary #### YOUR CODE HERE
 
 print(make_dictionary(["a", "b"], [1, 2]))
 print(make_dictionary([1, 2, 3], [5, 6, 7]))
@@ -29,19 +34,22 @@ scores = [10, 23, 13, 18, 12]
 # Assign the result of make_dictionary to score_dict, which will be used in the
 # exercises that follow.
 score_dict = make_dictionary(names, scores)
+print(score_dict)
 
 # 2. Using `score_dict`, find the score for "Nushi"
-#### YOUR CODE HERE
+print (score_dict["Nushi"])
 
 # 3. Add a score 19 for "John"
-#### YOUR CODE HERE
-
+score_dict["John"] = 19
+print (score_dict["John"])
 # 4. Calculate the average of all the scores in `score_dict`
-#### YOUR CODE HERE
+average_score = sum(scores) / len(scores)
+
+print("Average score:", average_score)
 
 # 5. Update the score for "Wei" to be 13
-#### YOUR CODE HERE
+score_dict["Wei"] = 13
+print (score_dict["Wei"])
 
-# 6. Nushi has just dropped this class. Delete "Nushi" and his score from
-# `score_dict`
-#### YOUR CODE HERE
+
+
